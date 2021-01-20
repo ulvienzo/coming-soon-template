@@ -31,6 +31,7 @@ body {
 }
 .header h1 {
   color: var(--clr-secondary);
+  text-transform: uppercase;
 }
 .header h3 {
   color: var(--clr-white);
@@ -67,8 +68,11 @@ body {
 .subscribe-form .subscribe-email-input {
   border-radius: 30px;
   width: 250px;
-  text-indent: 10px;
+  padding:5px 100px 5px 10px;
+  font-size: 14px;
 }
+
+
 .subscribe-form .subscribe-btn {
   position: absolute;
   border-radius: 30px;
@@ -105,6 +109,11 @@ body {
     font-size: 3rem;
   }
   .countdown > .countdown-box .time-info {
+    font-size: 1rem;
+  }
+  .subscribe-form .subscribe-email-input {
+    width: 370px;
+    padding:4px 100px 3px 15px;
     font-size: 1rem;
   }
 }
@@ -162,13 +171,13 @@ body {
   border-color: transparent;
 }
 #about {
-  /* background-color: #ffffff0e; */
   background-color:  rgba(158, 192, 207, 0.075);
   text-align: center;
 }
 #about p {
   color: var(--clr-white);
 }
+
 .section-header {
   position: relative;
   padding-bottom: 1rem;
@@ -192,6 +201,7 @@ body {
   margin: 10px;
   padding: 1rem 3rem;
 }
+
 .about-box .icon {
   margin-bottom: 10px;
 }
@@ -203,6 +213,9 @@ body {
 @media screen and (min-width: 768px) {
   .section-boxes {
     flex-direction: row;
+  }
+  .about-box{
+    width:33%;
   }
 }
 #contact {
