@@ -28,21 +28,23 @@ const items = document.querySelectorAll(".countdown-box .time-num");
 // elan gunu
 const tempDate = new Date();
 const tempYear = tempDate.getFullYear();
-const tempMonth = months[tempDate.getMonth()];
+const tempMonth = tempDate.getMonth();
 const tempMonthDay = tempDate.getDate();
-const tempWeekDay = weekdays[tempDate.getDay()];
 
-lastDay.innerHTML = `${tempYear} ${tempWeekDay} günü, ${tempMonthDay} ${tempMonth}, saat 12:00`;
-
+let month = months[tempMonth]
+lastDay.innerHTML = `${tempYear}, ${tempMonthDay} ${month}, saat 12:00`;
+console.log(tempMonth)
 // Functions
 
 // Teyin olunmush gun
-const futureDate = new Date(2021, tempMonth, tempMonthDay + 5, 12, 0);
+const futureDate = new Date(tempYear, tempMonth, tempMonthDay + 7, 12, 0);
+console.log(futureDate)
+const future = futureDate.getTime();
 function getRemainingTime() {
   // bugun
-  const today = new Date();
+  const today = new Date().getTime();
   // teyin olunmus gunle bugunun ms ile ferqi
-  const t = futureDate - today;
+  const t = future - today;
   // values in miliseconds
   const oneDay = 24 * 60 * 60 * 1000;
   const oneHour = 60 * 60 * 1000;
@@ -66,4 +68,4 @@ function getRemainingTime() {
 }
 
 // Countdown
-setInterval(getRemainingTime,1000)
+setInterval(getRemainingTime, 1000);
