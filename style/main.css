@@ -32,6 +32,8 @@ body {
 .header h1 {
   color: var(--clr-secondary);
   text-transform: uppercase;
+  background-color: rgba(158, 192, 207, 0.075);
+padding:1rem 0 ;
 }
 .header h3 {
   color: var(--clr-white);
@@ -45,6 +47,7 @@ body {
   display: flex;
   justify-content: center;
   margin: 3rem 0;
+
 }
 .countdown-box {
   border: 1px solid var(--clr-white);
